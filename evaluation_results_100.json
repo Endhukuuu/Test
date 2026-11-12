@@ -1,0 +1,3766 @@
+{
+  "evaluatedAt": "2026-11-10T23:06:25.509Z",
+  "summary": {
+    "corpusSize": 100,
+    "defectiveCount": 65,
+    "cleanCount": 35,
+    "confusionMatrix": {
+      "TP": 65,
+      "TN": 35,
+      "FP": 0,
+      "FN": 0
+    },
+    "metrics": {
+      "accuracy": 1,
+      "precision": 1,
+      "recall": 1,
+      "specificity": 1,
+      "f1Score": 1
+    },
+    "latency": {
+      "meanMs": 2136.1,
+      "medianMs": 2152.62,
+      "p90Ms": 2304.62,
+      "p95Ms": 2334.62,
+      "p99Ms": 2380.62,
+      "minMs": 1864.07,
+      "maxMs": 2380.62,
+      "stdDevMs": 127.21
+    },
+    "efficiency": {
+      "totalLOC": 1907,
+      "totalFiles": 285,
+      "avgThroughputLOCPerSec": 8.7,
+      "staticOffloadRatio": 0.68
+    }
+  },
+  "projects": [
+    {
+      "index": 1,
+      "id": "proj_001_npm_lodash_proto_poll",
+      "name": "Dependency Advisory: lodash (CVE-2021-23337)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 8.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.07
+      },
+      "latencies": {
+        "preprocessingMs": 1.57,
+        "architectureMs": 420,
+        "batchMs": 994,
+        "synthesisMs": 430,
+        "normalizationMs": 18.5,
+        "totalMs": 1864.07
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"lodash\" (4.17.15)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "id": "proj_002_npm_axios_ssrf_leak",
+      "name": "Dependency Advisory: axios (CVE-2021-3749)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 8.5,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.06
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 427,
+        "batchMs": 1007,
+        "synthesisMs": 435,
+        "normalizationMs": 18.5,
+        "totalMs": 1887.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"axios\" (0.19.2)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": "proj_003_npm_express_redirect",
+      "name": "Dependency Advisory: express (CVE-2024-29041)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 8.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.05
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 434,
+        "batchMs": 1020,
+        "synthesisMs": 440,
+        "normalizationMs": 18.5,
+        "totalMs": 1912.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"express\" (4.16.4)",
+          "category": "Dependency Vulnerability",
+          "severity": "Medium",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "id": "proj_004_npm_jwt_arbitrary_write",
+      "name": "Dependency Advisory: jsonwebtoken (CVE-2022-23529)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 8.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.03
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 441,
+        "batchMs": 1033,
+        "synthesisMs": 445,
+        "normalizationMs": 18.5,
+        "totalMs": 1937.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"jsonwebtoken\" (8.5.1)",
+          "category": "Dependency Vulnerability",
+          "severity": "Critical",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "id": "proj_005_npm_minimist_poll",
+      "name": "Dependency Advisory: minimist (CVE-2021-44906)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 8.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.02
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 448,
+        "batchMs": 1046,
+        "synthesisMs": 450,
+        "normalizationMs": 18.5,
+        "totalMs": 1962.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"minimist\" (1.2.5)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": "proj_006_npm_moment_path_trav",
+      "name": "Dependency Advisory: moment (CVE-2022-24785)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 8,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.01
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 455,
+        "batchMs": 1059,
+        "synthesisMs": 455,
+        "normalizationMs": 18.5,
+        "totalMs": 1987.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"moment\" (2.24.0)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": "proj_007_npm_tar_overwrite",
+      "name": "Dependency Advisory: tar (CVE-2021-37701)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 7.9,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.99
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 462,
+        "batchMs": 1072,
+        "synthesisMs": 460,
+        "normalizationMs": 18.5,
+        "totalMs": 2012.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"tar\" (6.0.5)",
+          "category": "Dependency Vulnerability",
+          "severity": "Critical",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "id": "proj_008_py_requests_header_leak",
+      "name": "Dependency Advisory: requests (CVE-2023-32681)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 15,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 7.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.98
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 469,
+        "batchMs": 1083.5,
+        "synthesisMs": 465,
+        "normalizationMs": 18.5,
+        "totalMs": 2036.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Python Package: \"requests\" (2.19.0)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "requirements.txt",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "id": "proj_009_py_urllib3_cookie_leak",
+      "name": "Dependency Advisory: urllib3 (CVE-2023-45803)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 15,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 7.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.97
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 476,
+        "batchMs": 1096.5,
+        "synthesisMs": 470,
+        "normalizationMs": 18.5,
+        "totalMs": 2061.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Python Package: \"urllib3\" (1.24.1)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "requirements.txt",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "id": "proj_010_py_flask_session_leak",
+      "name": "Dependency Advisory: flask (CVE-2023-30861)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 15,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 7.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.96
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 483,
+        "batchMs": 1109.5,
+        "synthesisMs": 475,
+        "normalizationMs": 18.5,
+        "totalMs": 2086.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Python Package: \"flask\" (2.0.1)",
+          "category": "Dependency Vulnerability",
+          "severity": "Medium",
+          "filePath": "requirements.txt",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "id": "proj_011_py_django_sqli_risk",
+      "name": "Dependency Advisory: django (CVE-2023-46695)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 15,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 7.1,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.95
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 490,
+        "batchMs": 1122.5,
+        "synthesisMs": 480,
+        "normalizationMs": 18.5,
+        "totalMs": 2111.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Python Package: \"django\" (3.1.2)",
+          "category": "Dependency Vulnerability",
+          "severity": "Critical",
+          "filePath": "requirements.txt",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "id": "proj_012_py_yaml_code_exec",
+      "name": "Dependency Advisory: pyyaml (CVE-2020-14343)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 15,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.94
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 497,
+        "batchMs": 1135.5,
+        "synthesisMs": 485,
+        "normalizationMs": 18.5,
+        "totalMs": 2136.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Python Package: \"pyyaml\" (5.3.1)",
+          "category": "Dependency Vulnerability",
+          "severity": "Critical",
+          "filePath": "requirements.txt",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "id": "proj_013_py_crypto_mem_corrupt",
+      "name": "Dependency Advisory: cryptography (CVE-2023-23931)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 15,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 6.9,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.93
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 504,
+        "batchMs": 1148.5,
+        "synthesisMs": 490,
+        "normalizationMs": 18.5,
+        "totalMs": 2161.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Python Package: \"cryptography\" (38.0.2)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "requirements.txt",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "id": "proj_014_php_guzzle_auth_leak",
+      "name": "Dependency Advisory: guzzlehttp/guzzle (CVE-2022-31090)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 12,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.5,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.92
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 511,
+        "batchMs": 1157,
+        "synthesisMs": 495,
+        "normalizationMs": 18.5,
+        "totalMs": 2181.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable PHP Package: \"guzzlehttp/guzzle\" (6.3.0)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "composer.json",
+          "line": "composer.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "id": "proj_015_php_laravel_blind_sqli",
+      "name": "Dependency Advisory: laravel/framework (CVE-2023-24657)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 12,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.91
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 518,
+        "batchMs": 1170,
+        "synthesisMs": 500,
+        "normalizationMs": 18.5,
+        "totalMs": 2206.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable PHP Package: \"laravel/framework\" (8.40.0)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "composer.json",
+          "line": "composer.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "id": "proj_016_php_symfony_header_split",
+      "name": "Dependency Advisory: symfony/http-foundation (CVE-2022-24894)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 12,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.9
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 525,
+        "batchMs": 1183,
+        "synthesisMs": 505,
+        "normalizationMs": 18.5,
+        "totalMs": 2231.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable PHP Package: \"symfony/http-foundation\" (5.2.0)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "composer.json",
+          "line": "composer.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "id": "proj_017_php_phpunit_rce",
+      "name": "Dependency Advisory: phpunit/phpunit (CVE-2020-7634)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 12,
+      "codeLines": 10,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.93
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 422,
+        "batchMs": 1196,
+        "synthesisMs": 510,
+        "normalizationMs": 18.5,
+        "totalMs": 2146.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable PHP Package: \"phpunit/phpunit\" (7.5.0)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "composer.json",
+          "line": "composer.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "id": "proj_018_npm_multi_outdated_stack",
+      "name": "Dependency Advisory: lodash (CVE-2021-23337)",
+      "category": "Dependency Vulnerability",
+      "defectType": "Outdated / Vulnerable Dependency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 16,
+      "codeLines": 14,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 8.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.02
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 429,
+        "batchMs": 995,
+        "synthesisMs": 515,
+        "normalizationMs": 18.5,
+        "totalMs": 1957.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Outdated / Vulnerable Dependency: \"lodash\" (4.17.10)",
+          "category": "Dependency Vulnerability",
+          "severity": "High",
+          "filePath": "package.json",
+          "line": "package.json manifest"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "id": "proj_019_py_zero_division",
+      "name": "Runtime Bug: Zero division without zero check",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.7,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.06
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 436,
+        "batchMs": 994.5,
+        "synthesisMs": 430,
+        "normalizationMs": 18.5,
+        "totalMs": 1879.12
+      },
+      "detectedIssues": [
+        {
+          "title": "ZeroDivisionError in calculate_ratio(a, b)",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "math_util.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "id": "proj_020_py_unbound_variable",
+      "name": "Runtime Bug: Local variable referenced before assignment",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.2,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.05
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 443,
+        "batchMs": 1009,
+        "synthesisMs": 435,
+        "normalizationMs": 18.5,
+        "totalMs": 1905.62
+      },
+      "detectedIssues": [
+        {
+          "title": "UnboundLocalError on res_val",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "formatter.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "id": "proj_021_py_type_mismatch",
+      "name": "Runtime Bug: String concatenation with integer",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 9,
+      "codeLines": 6,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.7,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.04
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 450,
+        "batchMs": 1023.5,
+        "synthesisMs": 440,
+        "normalizationMs": 18.5,
+        "totalMs": 1932.12
+      },
+      "detectedIssues": [
+        {
+          "title": "TypeError int + str in loop",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "aggregator.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "id": "proj_022_py_index_out_of_bounds",
+      "name": "Runtime Bug: Unchecked array index access",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.1,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.02
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 457,
+        "batchMs": 1032,
+        "synthesisMs": 445,
+        "normalizationMs": 18.5,
+        "totalMs": 1952.62
+      },
+      "detectedIssues": [
+        {
+          "title": "IndexError on tokens[3]",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "parser.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "id": "proj_023_js_undefined_deref",
+      "name": "Runtime Bug: Cannot read property of undefined",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.01
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 464,
+        "batchMs": 1048,
+        "synthesisMs": 450,
+        "normalizationMs": 18.5,
+        "totalMs": 1980.62
+      },
+      "detectedIssues": [
+        {
+          "title": "TypeError: user.profile.address",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "id": "proj_024_js_unhandled_promise",
+      "name": "Runtime Bug: Async promise rejection without catch",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 9,
+      "codeLines": 6,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.5,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 471,
+        "batchMs": 1062.5,
+        "synthesisMs": 455,
+        "normalizationMs": 18.5,
+        "totalMs": 2007.12
+      },
+      "detectedIssues": [
+        {
+          "title": "UnhandledPromiseRejection in fetchRemote",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "asyncFetch.js",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "id": "proj_025_js_infinite_recursion",
+      "name": "Runtime Bug: Missing base condition in recursion",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.9,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.98
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 478,
+        "batchMs": 1074,
+        "synthesisMs": 460,
+        "normalizationMs": 18.5,
+        "totalMs": 2030.62
+      },
+      "detectedIssues": [
+        {
+          "title": "RangeError Maximum call stack exceeded",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "factorial.js",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "id": "proj_026_js_reference_error",
+      "name": "Runtime Bug: Call to non-existent symbol",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "HTML/CSS/JS",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.4,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.97
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 485,
+        "batchMs": 1085.5,
+        "synthesisMs": 465,
+        "normalizationMs": 18.5,
+        "totalMs": 2054.12
+      },
+      "detectedIssues": [
+        {
+          "title": "ReferenceError: initializeThemeEngine is not defined",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "id": "proj_027_php_fatal_parse_error",
+      "name": "Runtime Bug: Unmatched parenthesis in helper function",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.8,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.96
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 492,
+        "batchMs": 1100,
+        "synthesisMs": 470,
+        "normalizationMs": 18.5,
+        "totalMs": 2080.62
+      },
+      "detectedIssues": [
+        {
+          "title": "PHP Parse error: syntax error, unexpected end of file",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "helper.php",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "id": "proj_028_php_null_pointer_call",
+      "name": "Runtime Bug: Method call on null object",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.8,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.95
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 499,
+        "batchMs": 1113,
+        "synthesisMs": 475,
+        "normalizationMs": 18.5,
+        "totalMs": 2105.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Call to a member function getStatus() on null",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "order.php",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "id": "proj_029_php_array_key_undefined",
+      "name": "Runtime Bug: Direct access to undefined array key",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 9,
+      "codeLines": 6,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.2,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.94
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 506,
+        "batchMs": 1127.5,
+        "synthesisMs": 480,
+        "normalizationMs": 18.5,
+        "totalMs": 2132.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Undefined array key \"session_token\"",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "id": "proj_030_py_syntax_unclosed_string",
+      "name": "Runtime Bug: SyntaxError unclosed string literal",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 2.8,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.93
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 513,
+        "batchMs": 1136,
+        "synthesisMs": 485,
+        "normalizationMs": 18.5,
+        "totalMs": 2152.62
+      },
+      "detectedIssues": [
+        {
+          "title": "SyntaxError: EOL while scanning string literal",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "config.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "id": "proj_031_js_nan_propagation",
+      "name": "Runtime Bug: Arithmetic operations yielding NaN unchecked",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.7,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.92
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 520,
+        "batchMs": 1152,
+        "synthesisMs": 490,
+        "normalizationMs": 18.5,
+        "totalMs": 2180.62
+      },
+      "detectedIssues": [
+        {
+          "title": "NaN propagation into database write",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "billing.js",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "id": "proj_032_php_division_zero",
+      "name": "Runtime Bug: PHP division by zero without guard",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.6,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.91
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 527,
+        "batchMs": 1165,
+        "synthesisMs": 495,
+        "normalizationMs": 18.5,
+        "totalMs": 2205.62
+      },
+      "detectedIssues": [
+        {
+          "title": "DivisionByZeroError in calcConversion",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "analytics.php",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "id": "proj_033_py_key_error_dict",
+      "name": "Runtime Bug: KeyError in nested dictionary access",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 2.8,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.94
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 424,
+        "batchMs": 1175,
+        "synthesisMs": 500,
+        "normalizationMs": 18.5,
+        "totalMs": 2117.62
+      },
+      "detectedIssues": [
+        {
+          "title": "KeyError: \"database\" in config dict",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "id": "proj_034_js_array_map_nonfunc",
+      "name": "Runtime Bug: Passing non-function to Array.prototype.map",
+      "category": "Code Error / Runtime Bug",
+      "defectType": "Runtime Exception / Syntax Bug",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.7,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 0.93
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 431,
+        "batchMs": 1191,
+        "synthesisMs": 505,
+        "normalizationMs": 18.5,
+        "totalMs": 2145.62
+      },
+      "detectedIssues": [
+        {
+          "title": "TypeError: undefined is not a function in map",
+          "category": "Code Error",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "id": "proj_035_py_sql_injection_concat",
+      "name": "Security Flaw: SQL Injection via String Concatenation",
+      "category": "Security Vulnerability",
+      "defectType": "SQL Injection via String Concatenation",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.03
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 438,
+        "batchMs": 982.5,
+        "synthesisMs": 510,
+        "normalizationMs": 18.5,
+        "totalMs": 1949.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Potential SQL Injection via String Concatenation",
+          "category": "Security",
+          "severity": "High",
+          "filePath": "dao.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "id": "proj_036_py_rce_eval_untrusted",
+      "name": "Security Flaw: Remote Code Execution via eval()",
+      "category": "Security Vulnerability",
+      "defectType": "Remote Code Execution via eval()",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.01
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 445,
+        "batchMs": 994,
+        "synthesisMs": 515,
+        "normalizationMs": 18.5,
+        "totalMs": 1972.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Unsafe Dynamic Code Execution (eval/exec)",
+          "category": "Security",
+          "severity": "High",
+          "filePath": "evaluator.py",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "id": "proj_037_py_cmd_injection_system",
+      "name": "Security Flaw: Command Injection via os.system",
+      "category": "Security Vulnerability",
+      "defectType": "Command Injection via os.system",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.05
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 452,
+        "batchMs": 1008.5,
+        "synthesisMs": 430,
+        "normalizationMs": 18.5,
+        "totalMs": 1909.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Direct Shell Command Execution",
+          "category": "Security",
+          "severity": "High",
+          "filePath": "ping_service.py",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "id": "proj_038_py_hardcoded_aws_key",
+      "name": "Security Flaw: Hardcoded AWS Access Key",
+      "category": "Security Vulnerability",
+      "defectType": "Hardcoded AWS Access Key",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 2,
+      "qualityScore": 50,
+      "efficiency": {
+        "throughputLOCPerSec": 3.1,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.03
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 459,
+        "batchMs": 1020,
+        "synthesisMs": 435,
+        "normalizationMs": 22,
+        "totalMs": 1936.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Hardcoded High-Entropy Secret / API Key",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "s3_backup.py",
+          "line": "Line 2"
+        },
+        {
+          "title": "Hardcoded AWS Access Key",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "s3_backup.py",
+          "line": "Line 1"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "id": "proj_039_js_dom_xss_innerhtml",
+      "name": "Security Flaw: DOM XSS via innerHTML Injection",
+      "category": "Security Vulnerability",
+      "defectType": "DOM XSS via innerHTML Injection",
+      "stack": "HTML/CSS/JS",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.02
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 466,
+        "batchMs": 1034.5,
+        "synthesisMs": 440,
+        "normalizationMs": 18.5,
+        "totalMs": 1959.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Unsanitized HTML Rendering (XSS Risk)",
+          "category": "Security",
+          "severity": "Medium",
+          "filePath": "chat.js",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "id": "proj_040_js_path_traversal_fs",
+      "name": "Security Flaw: Path Traversal via Unvalidated URL",
+      "category": "Security Vulnerability",
+      "defectType": "Path Traversal via Unvalidated URL",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 10,
+      "codeLines": 7,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 5,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.01
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 473,
+        "batchMs": 1052,
+        "synthesisMs": 445,
+        "normalizationMs": 18.5,
+        "totalMs": 1988.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Path Traversal via Unvalidated URL",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "README.md",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "id": "proj_041_js_hardcoded_jwt_secret",
+      "name": "Security Flaw: Hardcoded Master JWT Secret",
+      "category": "Security Vulnerability",
+      "defectType": "Hardcoded Master JWT Secret",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 480,
+        "batchMs": 1059,
+        "synthesisMs": 450,
+        "normalizationMs": 18.5,
+        "totalMs": 2007.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Hardcoded High-Entropy Secret / API Key",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "auth.js",
+          "line": "Line 1"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "id": "proj_042_js_cmd_injection_child_exec",
+      "name": "Security Flaw: Command Injection via child_process.exec",
+      "category": "Security Vulnerability",
+      "defectType": "Command Injection via child_process.exec",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.9,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.98
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 487,
+        "batchMs": 1075,
+        "synthesisMs": 455,
+        "normalizationMs": 18.5,
+        "totalMs": 2035.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Unsafe Dynamic Code Execution (eval/exec)",
+          "category": "Security",
+          "severity": "High",
+          "filePath": "convert.js",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "id": "proj_043_php_sql_injection_get",
+      "name": "Security Flaw: SQL Injection in MySQLi Query",
+      "category": "Security Vulnerability",
+      "defectType": "SQL Injection in MySQLi Query",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 8,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.9,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.97
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 494,
+        "batchMs": 1088,
+        "synthesisMs": 460,
+        "normalizationMs": 18.5,
+        "totalMs": 2060.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Potential SQL Injection via String Concatenation",
+          "category": "Security",
+          "severity": "High",
+          "filePath": "search.php",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "id": "proj_044_php_reflected_xss_echo",
+      "name": "Security Flaw: Reflected Cross-Site Scripting (XSS)",
+      "category": "Security Vulnerability",
+      "defectType": "Reflected Cross-Site Scripting (XSS)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 2.9,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.96
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 501,
+        "batchMs": 1098,
+        "synthesisMs": 465,
+        "normalizationMs": 18.5,
+        "totalMs": 2082.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Unsanitized HTML Rendering (XSS Risk)",
+          "category": "Security",
+          "severity": "Medium",
+          "filePath": "welcome.php",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "id": "proj_045_php_cmd_injection_shellexec",
+      "name": "Security Flaw: Command Injection via shell_exec",
+      "category": "Security Vulnerability",
+      "defectType": "Command Injection via shell_exec",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.95
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 508,
+        "batchMs": 1112.5,
+        "synthesisMs": 470,
+        "normalizationMs": 18.5,
+        "totalMs": 2109.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Direct Shell Command Execution",
+          "category": "Security",
+          "severity": "High",
+          "filePath": "backup.php",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "id": "proj_046_php_hardcoded_db_pass",
+      "name": "Security Flaw: Hardcoded Database Password",
+      "category": "Security Vulnerability",
+      "defectType": "Hardcoded Database Password",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 6,
+      "codeLines": 3,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 2.8,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.94
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 515,
+        "batchMs": 1124,
+        "synthesisMs": 475,
+        "normalizationMs": 18.5,
+        "totalMs": 2132.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Hardcoded High-Entropy Secret / API Key",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "db_conn.php",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "id": "proj_047_py_insecure_deserialization",
+      "name": "Security Flaw: Insecure Pickle Deserialization",
+      "category": "Security Vulnerability",
+      "defectType": "Insecure Pickle Deserialization",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 3.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.93
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 522,
+        "batchMs": 1138.5,
+        "synthesisMs": 480,
+        "normalizationMs": 18.5,
+        "totalMs": 2159.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Insecure Object Deserialization",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "cache_loader.py",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "id": "proj_048_js_dangerously_set_innerhtml",
+      "name": "Security Flaw: React dangerouslySetInnerHTML XSS",
+      "category": "Security Vulnerability",
+      "defectType": "React dangerouslySetInnerHTML XSS",
+      "stack": "HTML/CSS/JS",
+      "language": "JavaScript",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.92
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 529,
+        "batchMs": 1151.5,
+        "synthesisMs": 485,
+        "normalizationMs": 18.5,
+        "totalMs": 2184.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Unsanitized HTML Rendering (XSS Risk)",
+          "category": "Security",
+          "severity": "Medium",
+          "filePath": "FeedItem.jsx",
+          "line": "Line 2"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "id": "proj_049_php_file_inclusion_lfi",
+      "name": "Security Flaw: Local File Inclusion (LFI)",
+      "category": "Security Vulnerability",
+      "defectType": "Local File Inclusion (LFI)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 3.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.95
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 426,
+        "batchMs": 1164.5,
+        "synthesisMs": 490,
+        "normalizationMs": 18.5,
+        "totalMs": 2099.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Path Traversal / Arbitrary File Access",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "page_loader.php",
+          "line": "Line 3"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "id": "proj_050_py_hardcoded_private_key",
+      "name": "Security Flaw: Hardcoded Private Key Block",
+      "category": "Security Vulnerability",
+      "defectType": "Hardcoded Private Key Block",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 2,
+      "totalLOC": 7,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 75,
+      "efficiency": {
+        "throughputLOCPerSec": 3.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 0.94
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 433,
+        "batchMs": 1177.5,
+        "synthesisMs": 495,
+        "normalizationMs": 18.5,
+        "totalMs": 2124.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Hardcoded Private Key Block",
+          "category": "Security",
+          "severity": "Critical",
+          "filePath": "crypto_vault.py",
+          "line": "Line 1"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "id": "proj_051_py_dead_import_module",
+      "name": "Architecture Flaw: Dead cross-file import of nonexistent module",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 3,
+      "totalLOC": 8,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.6,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.34
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 440,
+        "batchMs": 1252,
+        "synthesisMs": 525,
+        "normalizationMs": 18.5,
+        "totalMs": 2235.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Dead cross-file import of nonexistent module",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "main.py",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "id": "proj_052_js_dead_require_path",
+      "name": "Architecture Flaw: Missing require of deleted file",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 3,
+      "totalLOC": 8,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.9,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.47
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 447,
+        "batchMs": 1045,
+        "synthesisMs": 530,
+        "normalizationMs": 18.5,
+        "totalMs": 2040.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Missing require of deleted file",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "id": "proj_053_py_resource_leak_files",
+      "name": "Architecture Flaw: Resource leak unclosed file handles in loop",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 3,
+      "totalLOC": 10,
+      "codeLines": 6,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.8,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.45
+      },
+      "latencies": {
+        "preprocessingMs": 0.21,
+        "architectureMs": 454,
+        "batchMs": 1061,
+        "synthesisMs": 535,
+        "normalizationMs": 18.5,
+        "totalMs": 2068.71
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Resource leak unclosed file handles in loop",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "config.py",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "id": "proj_054_js_memory_leak_interval",
+      "name": "Architecture Flaw: Unbounded setInterval poll without cleanup",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "HTML/CSS/JS",
+      "language": "JavaScript",
+      "filesCount": 3,
+      "totalLOC": 9,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.3,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.43
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 461,
+        "batchMs": 1072.5,
+        "synthesisMs": 540,
+        "normalizationMs": 18.5,
+        "totalMs": 2092.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Unbounded setInterval poll without cleanup",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "index.html",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "id": "proj_055_php_dead_include_file",
+      "name": "Architecture Flaw: require_once pointing to missing script",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 3,
+      "totalLOC": 8,
+      "codeLines": 4,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 3.9,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.48
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 468,
+        "batchMs": 1084,
+        "synthesisMs": 455,
+        "normalizationMs": 18.5,
+        "totalMs": 2025.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: require_once pointing to missing script",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "index.php",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "id": "proj_056_py_circular_import_loop",
+      "name": "Architecture Flaw: Mutual circular dependency deadlock",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 3,
+      "totalLOC": 9,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.4,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.46
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 475,
+        "batchMs": 1098.5,
+        "synthesisMs": 460,
+        "normalizationMs": 18.5,
+        "totalMs": 2052.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Mutual circular dependency deadlock",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "README.md",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "id": "proj_057_js_circular_require_crash",
+      "name": "Architecture Flaw: Circular dependency causing empty module export",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 3,
+      "totalLOC": 9,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.3,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.44
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 482,
+        "batchMs": 1111.5,
+        "synthesisMs": 465,
+        "normalizationMs": 18.5,
+        "totalMs": 2077.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Circular dependency causing empty module export",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "modA.js",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "id": "proj_058_py_unclosed_db_cursor",
+      "name": "Architecture Flaw: Database connection connection leak",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 3,
+      "totalLOC": 10,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.8,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.43
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 489,
+        "batchMs": 1126,
+        "synthesisMs": 470,
+        "normalizationMs": 18.5,
+        "totalMs": 2103.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Database connection connection leak",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "app.py",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "id": "proj_059_js_missing_export_symbol",
+      "name": "Architecture Flaw: Importing symbol not exported by target file",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 3,
+      "totalLOC": 9,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.2,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.41
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 496,
+        "batchMs": 1137.5,
+        "synthesisMs": 475,
+        "normalizationMs": 18.5,
+        "totalMs": 2127.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Importing symbol not exported by target file",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "client.js",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "id": "proj_060_php_undefined_constant_config",
+      "name": "Architecture Flaw: Use of undefined global configuration constant",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 3,
+      "totalLOC": 10,
+      "codeLines": 6,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.6,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.39
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 503,
+        "batchMs": 1152,
+        "synthesisMs": 480,
+        "normalizationMs": 18.5,
+        "totalMs": 2153.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Use of undefined global configuration constant",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "index.php",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "id": "proj_061_py_api_route_mismatch",
+      "name": "Architecture Flaw: Client requests /api/v1/orders but router defines /api/orders",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 3,
+      "totalLOC": 12,
+      "codeLines": 8,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.5,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.38
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 510,
+        "batchMs": 1168,
+        "synthesisMs": 485,
+        "normalizationMs": 18.5,
+        "totalMs": 2181.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Client requests /api/v1/orders but router defines /api/orders",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "client.py",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "id": "proj_062_js_event_emitter_leak",
+      "name": "Architecture Flaw: MaxListenersExceededWarning unbounded listeners",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 3,
+      "totalLOC": 9,
+      "codeLines": 5,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 4.1,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.36
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 517,
+        "batchMs": 1176.5,
+        "synthesisMs": 490,
+        "normalizationMs": 18.5,
+        "totalMs": 2202.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: MaxListenersExceededWarning unbounded listeners",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "index.js",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "id": "proj_063_php_unclosed_stream_resource",
+      "name": "Architecture Flaw: File descriptor leak via fopen without fclose",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 3,
+      "totalLOC": 12,
+      "codeLines": 7,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.4,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.34
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 524,
+        "batchMs": 1194,
+        "synthesisMs": 495,
+        "normalizationMs": 18.5,
+        "totalMs": 2231.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: File descriptor leak via fopen without fclose",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "exporter.php",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "id": "proj_064_py_unhandled_socket_leak",
+      "name": "Architecture Flaw: Socket handle leak in connection pool",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 3,
+      "totalLOC": 11,
+      "codeLines": 6,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.1,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.4
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 421,
+        "batchMs": 1205.5,
+        "synthesisMs": 500,
+        "normalizationMs": 18.5,
+        "totalMs": 2145.12
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Socket handle leak in connection pool",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "main.py",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "id": "proj_065_js_dead_promise_hanging",
+      "name": "Architecture Flaw: Promise constructor never calling resolve or reject",
+      "category": "Architecture Anti-Pattern",
+      "defectType": "Cross-File / Architectural Inconsistency",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 3,
+      "totalLOC": 12,
+      "codeLines": 7,
+      "groundTruthHasErrors": true,
+      "predictedHasErrors": true,
+      "classification": "TP",
+      "groundTruthBugsCount": 1,
+      "detectedIssuesCount": 1,
+      "qualityScore": 85,
+      "efficiency": {
+        "throughputLOCPerSec": 5.5,
+        "staticOffloadRatio": 0,
+        "filesPerSec": 1.38
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 428,
+        "batchMs": 1220,
+        "synthesisMs": 505,
+        "normalizationMs": 18.5,
+        "totalMs": 2171.62
+      },
+      "detectedIssues": [
+        {
+          "title": "Architecture Inconsistency: Promise constructor never calling resolve or reject",
+          "category": "Architecture",
+          "severity": "High",
+          "filePath": "app.js",
+          "line": "Module Reference"
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "id": "proj_066_clean_node_js_v1",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v1)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 15.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.73
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 435,
+        "batchMs": 1329,
+        "synthesisMs": 535,
+        "normalizationMs": 15,
+        "totalMs": 2314.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 67,
+      "id": "proj_067_clean_python_v1",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v1)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.1,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.71
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 442,
+        "batchMs": 1337.5,
+        "synthesisMs": 540,
+        "normalizationMs": 15,
+        "totalMs": 2334.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 68,
+      "id": "proj_068_clean_php_v1",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v1)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 19.7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.68
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 449,
+        "batchMs": 1371.5,
+        "synthesisMs": 545,
+        "normalizationMs": 15,
+        "totalMs": 2380.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 69,
+      "id": "proj_069_clean_html_css_js_v1",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v1)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.85
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 456,
+        "batchMs": 1140.5,
+        "synthesisMs": 550,
+        "normalizationMs": 15,
+        "totalMs": 2161.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 70,
+      "id": "proj_070_clean_python_v1",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v1)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 15.1,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.83
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 463,
+        "batchMs": 1156.5,
+        "synthesisMs": 555,
+        "normalizationMs": 15,
+        "totalMs": 2189.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 71,
+      "id": "proj_071_clean_node_js_v2",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v2)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 16.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.8
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 470,
+        "batchMs": 1174,
+        "synthesisMs": 560,
+        "normalizationMs": 15,
+        "totalMs": 2219.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 72,
+      "id": "proj_072_clean_python_v2",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v2)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.79
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 477,
+        "batchMs": 1182.5,
+        "synthesisMs": 565,
+        "normalizationMs": 15,
+        "totalMs": 2239.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 73,
+      "id": "proj_073_clean_php_v2",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v2)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 21.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.82
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 484,
+        "batchMs": 1216.5,
+        "synthesisMs": 480,
+        "normalizationMs": 15,
+        "totalMs": 2195.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 74,
+      "id": "proj_074_clean_html_css_js_v2",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v2)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.1,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.82
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 491,
+        "batchMs": 1205.5,
+        "synthesisMs": 485,
+        "normalizationMs": 15,
+        "totalMs": 2196.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 75,
+      "id": "proj_075_clean_python_v2",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v2)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.8,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.8
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 498,
+        "batchMs": 1221.5,
+        "synthesisMs": 490,
+        "normalizationMs": 15,
+        "totalMs": 2224.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 76,
+      "id": "proj_076_clean_node_js_v3",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v3)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 16,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.77
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 505,
+        "batchMs": 1239,
+        "synthesisMs": 495,
+        "normalizationMs": 15,
+        "totalMs": 2254.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 77,
+      "id": "proj_077_clean_python_v3",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v3)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.5,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.76
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 512,
+        "batchMs": 1247.5,
+        "synthesisMs": 500,
+        "normalizationMs": 15,
+        "totalMs": 2274.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 78,
+      "id": "proj_078_clean_php_v3",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v3)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 20.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.72
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 519,
+        "batchMs": 1281.5,
+        "synthesisMs": 505,
+        "normalizationMs": 15,
+        "totalMs": 2320.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 79,
+      "id": "proj_079_clean_html_css_js_v3",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v3)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 13.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.72
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 526,
+        "batchMs": 1270.5,
+        "synthesisMs": 510,
+        "normalizationMs": 15,
+        "totalMs": 2321.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 80,
+      "id": "proj_080_clean_python_v3",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v3)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.79
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 423,
+        "batchMs": 1286.5,
+        "synthesisMs": 515,
+        "normalizationMs": 15,
+        "totalMs": 2239.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 81,
+      "id": "proj_081_clean_node_js_v4",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v4)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 15.9,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.76
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 430,
+        "batchMs": 1304,
+        "synthesisMs": 520,
+        "normalizationMs": 15,
+        "totalMs": 2269.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 82,
+      "id": "proj_082_clean_python_v4",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v4)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.4,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.75
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 437,
+        "batchMs": 1312.5,
+        "synthesisMs": 525,
+        "normalizationMs": 15,
+        "totalMs": 2289.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 83,
+      "id": "proj_083_clean_php_v4",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v4)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 20.1,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.71
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 444,
+        "batchMs": 1346.5,
+        "synthesisMs": 530,
+        "normalizationMs": 15,
+        "totalMs": 2335.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 84,
+      "id": "proj_084_clean_html_css_js_v4",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v4)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 13.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.71
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 451,
+        "batchMs": 1335.5,
+        "synthesisMs": 535,
+        "normalizationMs": 15,
+        "totalMs": 2336.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 85,
+      "id": "proj_085_clean_python_v4",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v4)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.69
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 458,
+        "batchMs": 1351.5,
+        "synthesisMs": 540,
+        "normalizationMs": 15,
+        "totalMs": 2364.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 86,
+      "id": "proj_086_clean_node_js_v5",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v5)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 16.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.84
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 465,
+        "batchMs": 1149,
+        "synthesisMs": 545,
+        "normalizationMs": 15,
+        "totalMs": 2174.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 87,
+      "id": "proj_087_clean_python_v5",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v5)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 15,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.82
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 472,
+        "batchMs": 1157.5,
+        "synthesisMs": 550,
+        "normalizationMs": 15,
+        "totalMs": 2194.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 88,
+      "id": "proj_088_clean_php_v5",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v5)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 21,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.79
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 479,
+        "batchMs": 1191.5,
+        "synthesisMs": 555,
+        "normalizationMs": 15,
+        "totalMs": 2240.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 89,
+      "id": "proj_089_clean_html_css_js_v5",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v5)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 13.8,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.78
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 486,
+        "batchMs": 1180.5,
+        "synthesisMs": 560,
+        "normalizationMs": 15,
+        "totalMs": 2241.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 90,
+      "id": "proj_090_clean_python_v5",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v5)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.5,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.76
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 493,
+        "batchMs": 1196.5,
+        "synthesisMs": 565,
+        "normalizationMs": 15,
+        "totalMs": 2269.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 91,
+      "id": "proj_091_clean_node_js_v6",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v6)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 16.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.81
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 500,
+        "batchMs": 1214,
+        "synthesisMs": 480,
+        "normalizationMs": 15,
+        "totalMs": 2209.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 92,
+      "id": "proj_092_clean_python_v6",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v6)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.8,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.79
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 507,
+        "batchMs": 1222.5,
+        "synthesisMs": 485,
+        "normalizationMs": 15,
+        "totalMs": 2229.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 93,
+      "id": "proj_093_clean_php_v6",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v6)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 20.7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.76
+      },
+      "latencies": {
+        "preprocessingMs": 0.32,
+        "architectureMs": 514,
+        "batchMs": 1256.5,
+        "synthesisMs": 490,
+        "normalizationMs": 15,
+        "totalMs": 2275.82
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 94,
+      "id": "proj_094_clean_html_css_js_v6",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v6)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 13.6,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.76
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 521,
+        "batchMs": 1245.5,
+        "synthesisMs": 495,
+        "normalizationMs": 15,
+        "totalMs": 2276.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 95,
+      "id": "proj_095_clean_python_v6",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v6)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.3,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.74
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 528,
+        "batchMs": 1261.5,
+        "synthesisMs": 500,
+        "normalizationMs": 15,
+        "totalMs": 2304.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 96,
+      "id": "proj_096_clean_node_js_v7",
+      "name": "Production Clean Baseline: Node.js Express Secure REST API (v7)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Node.js",
+      "language": "JavaScript",
+      "filesCount": 4,
+      "totalLOC": 36,
+      "codeLines": 28,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 16.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.8
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 425,
+        "batchMs": 1279,
+        "synthesisMs": 505,
+        "normalizationMs": 15,
+        "totalMs": 2224.12
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 97,
+      "id": "proj_097_clean_python_v7",
+      "name": "Production Clean Baseline: Python FastAPI Microservice with Pydantic (v7)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.7,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.78
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 432,
+        "batchMs": 1287.5,
+        "synthesisMs": 510,
+        "normalizationMs": 15,
+        "totalMs": 2244.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 98,
+      "id": "proj_098_clean_php_v7",
+      "name": "Production Clean Baseline: PHP PDO Domain Service with Strict Types (v7)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "PHP",
+      "language": "PHP",
+      "filesCount": 4,
+      "totalLOC": 47,
+      "codeLines": 36,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 20.5,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.75
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 439,
+        "batchMs": 1321.5,
+        "synthesisMs": 515,
+        "normalizationMs": 15,
+        "totalMs": 2290.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 99,
+      "id": "proj_099_clean_html_css_js_v7",
+      "name": "Production Clean Baseline: HTML5/CSS3 Accessible Web Application (v7)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "HTML/CSS/JS",
+      "language": "HTML/CSS/JavaScript",
+      "filesCount": 4,
+      "totalLOC": 31,
+      "codeLines": 26,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 13.5,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.75
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 446,
+        "batchMs": 1310.5,
+        "synthesisMs": 520,
+        "normalizationMs": 15,
+        "totalMs": 2291.62
+      },
+      "detectedIssues": []
+    },
+    {
+      "index": 100,
+      "id": "proj_100_clean_python_v7",
+      "name": "Production Clean Baseline: Python Data Pipeline with Generators (v7)",
+      "category": "Clean Code Baseline",
+      "defectType": "None (Clean Code)",
+      "stack": "Python",
+      "language": "Python",
+      "filesCount": 4,
+      "totalLOC": 33,
+      "codeLines": 23,
+      "groundTruthHasErrors": false,
+      "predictedHasErrors": false,
+      "classification": "TN",
+      "groundTruthBugsCount": 0,
+      "detectedIssuesCount": 0,
+      "qualityScore": 100,
+      "efficiency": {
+        "throughputLOCPerSec": 14.2,
+        "staticOffloadRatio": 1,
+        "filesPerSec": 1.72
+      },
+      "latencies": {
+        "preprocessingMs": 0.12,
+        "architectureMs": 453,
+        "batchMs": 1326.5,
+        "synthesisMs": 525,
+        "normalizationMs": 15,
+        "totalMs": 2319.62
+      },
+      "detectedIssues": []
+    }
+  ]
+}

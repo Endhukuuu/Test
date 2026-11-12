@@ -1,0 +1,27 @@
+{
+  "name": "udih-evaluation-matrix-test",
+  "version": "1.0.0",
+  "description": "Evaluation Matrix Benchmark Corpus of 100 Multi-Language Projects for AI-Powered Semantic Defect Detection, Dependency Auditing, and Architecture Intelligence",
+  "main": "run_evaluation_100.cjs",
+  "scripts": {
+    "test": "node run_evaluation_100.cjs",
+    "benchmark": "node run_evaluation_100.cjs"
+  },
+  "dependencies": {
+    "adm-zip": "^0.6.0"
+  },
+  "keywords": [
+    "evaluation-matrix",
+    "defect-detection",
+    "accuracy",
+    "precision",
+    "recall",
+    "f1-score",
+    "latency",
+    "dependency-audit",
+    "software-engineering",
+    "code-analysis"
+  ],
+  "author": "Harsh",
+  "license": "MIT"
+}
