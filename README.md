@@ -1,31 +1,31 @@
-# 📊 Evaluation Matrix Benchmark Test Suite
-### 100 Multi-Language Projects for AI Code Intelligence, Defect Detection, Dependency Auditing & Performance Profiling
+# Evaluation Matrix Benchmark Test Suite
+### 100 Multi-Language Projects for AI Code Intelligence, Defect Detection, Dependency Auditing, and Performance Profiling
 
-[![Accuracy](https://img.shields.io/badge/Accuracy-100.00%25-brightgreen.svg)](#-evaluation-matrix--metrics)
-[![Precision](https://img.shields.io/badge/Precision-100.00%25-brightgreen.svg)](#-evaluation-matrix--metrics)
-[![Recall](https://img.shields.io/badge/Recall-100.00%25-brightgreen.svg)](#-evaluation-matrix--metrics)
-[![F1-Score](https://img.shields.io/badge/F1--Score-1.0000-blue.svg)](#-evaluation-matrix--metrics)
-[![Mean-Latency](https://img.shields.io/badge/Mean%20Latency-2.14s-blue.svg)](#-latency-profiling)
-[![Corpus](https://img.shields.io/badge/Test%20Corpus-100%20ZIP%20Projects-orange.svg)](#-corpus-architecture)
+[![Accuracy](https://img.shields.io/badge/Accuracy-100.00%25-brightgreen.svg)](#evaluation-matrix-and-performance-metrics)
+[![Precision](https://img.shields.io/badge/Precision-100.00%25-brightgreen.svg)](#evaluation-matrix-and-performance-metrics)
+[![Recall](https://img.shields.io/badge/Recall-100.00%25-brightgreen.svg)](#evaluation-matrix-and-performance-metrics)
+[![F1-Score](https://img.shields.io/badge/F1--Score-1.0000-blue.svg)](#evaluation-matrix-and-performance-metrics)
+[![Mean-Latency](https://img.shields.io/badge/Mean%20Latency-2.14s-blue.svg)](#latency-profiling)
+[![Corpus](https://img.shields.io/badge/Test%20Corpus-100%20ZIP%20Projects-orange.svg)](#corpus-architecture)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
-This repository contains the complete, self-contained **100-Project Evaluation Matrix Benchmark Suite** designed to rigorously assess AI-powered developer intelligence platforms, static analysis pipelines, and vulnerability scanners.
+This repository contains the complete, self-contained **100-Project Evaluation Matrix Benchmark Suite** designed to rigorously evaluate developer intelligence platforms, static analysis pipelines, and vulnerability scanners across code defect identification, dependency auditing, and latency profiling.
 
 ---
 
-## 📁 Repository Contents
+## Repository Contents
 
 ```
 Evaluation matrix test/
-├── README.md                               # This primary repository overview & guide
-├── EVALUATION_REPORT.md                    # In-depth technical benchmark documentation
+├── README.md                               # Primary repository overview and benchmark documentation
+├── EVALUATION_REPORT.md                    # In-depth technical report and statistical analysis
 ├── UDIH_100_Projects_Evaluation_Matrix.xlsx # 6-Sheet official styled Excel workbook
 ├── UDIH_100_Projects_Evaluation_Matrix.csv  # Delimited CSV summary dataset
 ├── manifest_100.json                       # Master ground-truth specification (100 projects)
 ├── evaluation_results_100.json             # Machine-readable evaluation telemetry data
 ├── run_evaluation_100.cjs                  # Standalone automated benchmark runner script
-├── codePreprocessor.js                     # Deterministic preprocessing & dependency auditor
-├── package.json                            # Node.js project manifest & dependencies
+├── codePreprocessor.js                     # Deterministic preprocessing and dependency auditor
+├── package.json                            # Node.js project manifest and dependencies
 ├── LICENSE                                 # MIT Open-Source License
 └── zips/                                   # All 100 ready-to-upload ZIP archives
     ├── proj_001_npm_lodash_proto_poll.zip
@@ -36,29 +36,41 @@ Evaluation matrix test/
 
 ---
 
-## 🎯 Evaluation Matrix & Metrics
+## Evaluation Matrix and Performance Metrics
 
-### 1. Formal Confusion Matrix (100 Projects)
+### 1. Confusion Matrix (100 Projects)
 
 | Ground Truth \ Prediction | Predicted Defective | Predicted Clean | Total Actual |
 | :--- | :---: | :---: | :---: |
-| **Actual Defective (Positives, $P=65$)** | **TP = 65** | **FN = 0** | **$P = 65$** |
-| **Actual Clean (Negatives, $N=35$)** | **FP = 0** | **TN = 35** | **$N = 35$** |
+| **Actual Defective (Positives, $P = 65$)** | **TP = 65** | **FN = 0** | **$P = 65$** |
+| **Actual Clean (Negatives, $N = 35$)** | **FP = 0** | **TN = 35** | **$N = 35$** |
 | **Total Predicted** | **65** | **35** | **Total = 100** |
 
 ### 2. Primary Classification Metrics
 
-$$\begin{aligned}
-\text{Accuracy} &= \frac{TP + TN}{\text{Total}} = \frac{65 + 35}{100} = \mathbf{100.00\%} \\[6pt]
-\text{Precision (PPV)} &= \frac{TP}{TP + FP} = \frac{65}{65 + 0} = \mathbf{100.00\%} \quad \text{(Zero False Alarms)} \\[6pt]
-\text{Recall (Sensitivity)} &= \frac{TP}{TP + FN} = \frac{65}{65 + 0} = \mathbf{100.00\%} \quad \text{(Zero Defect Leakage)} \\[6pt]
-\text{Specificity (TNR)} &= \frac{TN}{TN + FP} = \frac{35}{35 + 0} = \mathbf{100.00\%} \quad \text{(100\% Clean Recognition)} \\[6pt]
-\text{F1-Score} &= 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = \mathbf{1.0000}
-\end{aligned}$$
+| Metric | Mathematical Formula | Numerical Calculation | Benchmark Score | Operational Definition |
+| :--- | :---: | :---: | :---: | :--- |
+| **Accuracy** | $\frac{TP + TN}{\text{Total}}$ | $\frac{65 + 35}{100}$ | **100.00%** | Zero misclassifications across entire benchmark corpus |
+| **Precision (PPV)** | $\frac{TP}{TP + FP}$ | $\frac{65}{65 + 0}$ | **100.00%** | Zero false positives; 100% alert confidence |
+| **Recall (Sensitivity)** | $\frac{TP}{TP + FN}$ | $\frac{65}{65 + 0}$ | **100.00%** | Zero false negatives; all defective codebases intercepted |
+| **Specificity (TNR)** | $\frac{TN}{TN + FP}$ | $\frac{35}{35 + 0}$ | **100.00%** | Zero synthetic noise; clean codebases identified |
+| **F1-Score** | $2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$ | $2 \times \frac{1.0 \times 1.0}{1.0 + 1.0}$ | **1.0000** | Optimal harmonic balance across unbalanced classes |
+
+### 3. Mathematical Derivations
+
+$$ \text{Accuracy} = \frac{TP + TN}{\text{Total}} = \frac{65 + 35}{100} = 100.00\% $$
+
+$$ \text{Precision (PPV)} = \frac{TP}{TP + FP} = \frac{65}{65 + 0} = 100.00\% $$
+
+$$ \text{Recall (Sensitivity)} = \frac{TP}{TP + FN} = \frac{65}{65 + 0} = 100.00\% $$
+
+$$ \text{Specificity (TNR)} = \frac{TN}{TN + FP} = \frac{35}{35 + 0} = 100.00\% $$
+
+$$ \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 1.0000 $$
 
 ---
 
-## ⏱ Latency Profiling
+## Latency Profiling
 
 Across all 100 evaluated projects (285 source files, 1,907 lines of code):
 
@@ -75,18 +87,18 @@ Across all 100 evaluated projects (285 source files, 1,907 lines of code):
 
 ---
 
-## ⚡ Efficiency & Throughput
+## Efficiency and Throughput
 
 | Efficiency Parameter | Measured Value | Practical Engineering Significance |
 | :--- | :---: | :--- |
 | **Total Code Processed** | **1,907 LOC / 285 Files** | Realistic multi-language code corpus |
 | **Mean Throughput** | **8.7 LOC / second** | High-speed parsing, segmentation, and batch inference |
 | **Static Preprocessor Offload** | **68.00%** | **68% of all defects caught in Stage 1** with 0 LLM token latency (< 1 ms) |
-| **Test Execution Time** | **< 0.1 seconds** | Ultra-fast automated verification |
+| **Test Execution Time** | **< 0.1 seconds** | Fast automated verification |
 
 ---
 
-## 📦 Corpus Architecture
+## Corpus Architecture
 
 ```
                                 100 BENCHMARK PROJECTS
@@ -118,7 +130,7 @@ Across all 100 evaluated projects (285 source files, 1,907 lines of code):
 
 ---
 
-## 📑 Excel Spreadsheet Structure (`UDIH_100_Projects_Evaluation_Matrix.xlsx`)
+## Excel Spreadsheet Structure (`UDIH_100_Projects_Evaluation_Matrix.xlsx`)
 
 The accompanying Excel file is structured with **6 specialized sheets**:
 
@@ -131,7 +143,7 @@ The accompanying Excel file is structured with **6 specialized sheets**:
 
 ---
 
-## 🚀 How to Use & Test
+## Verification and Testing Guide
 
 ### Option 1: Standalone Automated CLI Test
 Clone the repository, install dependencies, and run the automated test suite:
@@ -152,7 +164,7 @@ You can upload any of the 100 ZIP files from the [`zips/`](zips/) directory dire
 
 ---
 
-## 📤 How to Push to Your Test GitHub Repository
+## GitHub Repository Deployment
 
 To upload this folder directly to a new GitHub repository:
 
@@ -175,7 +187,7 @@ git push -u origin main
 
 ---
 
-## 📜 Complete 100-Project Index
+## Complete 100-Project Benchmark Index
 
 <details>
 <summary><b>Click to expand the full index of all 100 benchmark projects</b></summary>
@@ -287,6 +299,6 @@ git push -u origin main
 
 ---
 
-## 📄 License
+## License
 
 This benchmark test suite and documentation are licensed under the [MIT License](LICENSE).
