@@ -7,7 +7,6 @@
 [![F1-Score](https://img.shields.io/badge/F1--Score-1.0000-blue.svg)](#evaluation-matrix-and-performance-metrics)
 [![Mean-Latency](https://img.shields.io/badge/Mean%20Latency-2.14s-blue.svg)](#latency-profiling)
 [![Corpus](https://img.shields.io/badge/Test%20Corpus-100%20ZIP%20Projects-orange.svg)](#corpus-architecture)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
 This repository contains the complete, self-contained **100-Project Evaluation Matrix Benchmark Suite** designed to rigorously evaluate developer intelligence platforms, static analysis pipelines, and vulnerability scanners across code defect identification, dependency auditing, and latency profiling.
 
@@ -296,9 +295,3 @@ git push -u origin main
 | 100 | `proj_100_clean_python_v7` | Production Clean Baseline: Python Data Pipeline with Generators (v7) | Python | Clean | CLEAN | 100 | 2,320 ms |
 
 </details>
-
----
-
-## License
-
-This benchmark test suite and documentation are licensed under the [MIT License](LICENSE).
