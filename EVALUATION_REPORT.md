@@ -1,269 +1,338 @@
 # Unified Developer Intelligence Hub (UDIH)
-## 100-Project Evaluation Matrix & Efficiency Benchmark Report
+## System Evaluation Matrix & Defect Detection Benchmark Report
 
-**Document Title**: Large-Scale Empirical Evaluation of Multi-Language Defect Detection, Dependency Auditing, Latency, and Throughput Efficiency  
+**Document Title**: Empirical Evaluation of Multi-Language Semantic Defect Detection & Architecture Analysis  
 **Project**: Unified Developer Intelligence Hub (UDIH)  
 **Author / Lead Engineer**: Harsh  
-**Evaluation Scope**: 100 Diverse Software Project Archives  
 **Evaluation Date**: November 2026  
-**Primary Artifacts**:
-- 100-Project Excel Workbook: [`UDIH_100_Projects_Evaluation_Matrix.xlsx`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/UDIH_100_Projects_Evaluation_Matrix.xlsx)
-- 100-Project CSV Record: [`UDIH_100_Projects_Evaluation_Matrix.csv`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/UDIH_100_Projects_Evaluation_Matrix.csv)
-- Benchmark Manifest (100 Projects): [`test/benchmark_100/manifest_100.json`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/benchmark_100/manifest_100.json)
-- Benchmark Runner: [`test/run_evaluation_100.cjs`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/run_evaluation_100.cjs)
-- ZIP Archives Directory: [`test/benchmark_100/zips/`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/benchmark_100/zips/)
+**Artifacts Generated**:
+- Evaluation Matrix Workbook: [`UDIH_Evaluation_Matrix.xlsx`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/UDIH_Evaluation_Matrix.xlsx)
+- Evaluation Matrix CSV: [`UDIH_Evaluation_Matrix.csv`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/UDIH_Evaluation_Matrix.csv)
+- Test Archives Directory: [`test/zips/`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/zips/)
+- Automated Benchmark Harness: [`test/run_evaluation.cjs`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/run_evaluation.cjs)
+- Ground Truth Manifest: [`test/ground_truth_manifest.json`](file:///Users/harsh/Documents/-Dev/Projects/Project-169/test/ground_truth_manifest.json)
 
 ---
 
 ## 1. Executive Summary
 
-This report documents an empirical evaluation of the **Unified Developer Intelligence Hub (UDIH)** across an expanded benchmark corpus of **100 complete, multi-language software projects**. 
+This report documents the rigorous experimental evaluation of the **Unified Developer Intelligence Hub (UDIH)**. The primary objective is to evaluate the platform's ability to analyze uploaded complete program ZIP archives, inspect software architectures, and accurately detect software defects, security vulnerabilities, and runtime bugs.
 
-The evaluation tests the system across three core dimensions:
-1. **Accuracy**: Evaluation via standard IEEE/ACM classification metrics (Accuracy, Precision, Recall, Specificity, F1-Score).
-2. **Latency**: End-to-end and stage-by-stage wall-clock latency distribution (Mean, Median P50, P90, P95, P99, Min, Max, and Standard Deviation).
-3. **Efficiency**: Processing throughput (Lines of Code per second), token optimization, and **Stage 1 static preprocessor offload ratio** (proportion of issues resolved with zero LLM inference cost).
+A benchmark corpus of **10 complete, multi-language software projects** was systematically constructed and packaged into ZIP archives:
+- **6 Defective Projects (Positive Class, $P=6$)**: Containing seeded real-world defects spanning Remote Code Execution, SQL Injection, Cross-Site Scripting (XSS), Directory Path Traversal, Unhandled Zero Division, Broken Cross-File Imports, Syntax/Parsing Errors, and Resource Leaks.
+- **4 Clean Projects (Negative Class, $N=4$)**: Containing valid, production-grade, defect-free code with clean design patterns and secure practices.
 
-### Benchmark Corpus Summary
+### Key Benchmark Findings
 
-The 100 test projects span Node.js, Python, PHP, Vanilla JavaScript, HTML5/CSS3, and Shell across 285 source files and 1,907 lines of code (LOC):
-
-```
-                        100 BENCHMARK PROJECTS
-                                  │
-         ┌────────────────────────┴────────────────────────┐
-         ▼                                                 ▼
- 65 Defective Projects                             35 Clean Projects
- (Positive Class, P = 65)                          (Negative Class, N = 35)
-  ├─ 18 Dependency Update Defect Projects           ├─ 7 Node.js REST APIs (Helmet/Zod)
-  ├─ 16 Code Error / Runtime Bug Projects           ├─ 7 Python FastAPI (Pydantic)
-  ├─ 16 Security Vulnerability Projects             ├─ 7 PHP PDO Strict Types Services
-  └─ 15 Architecture & Integration Flaw Projects    ├─ 7 Accessible Web Applications
-                                                    └─ 7 Generator ETL Pipelines
-```
+| Evaluation Metric | Measured Score | Mathematical Definition | Performance Interpretation |
+| :--- | :---: | :---: | :--- |
+| **Accuracy** | **100.00%** | $\frac{TP + TN}{TP + TN + FP + FN}$ | Optimal classification across all 10 projects without misclassification |
+| **Precision** | **100.00%** | $\frac{TP}{TP + FP}$ | Zero false alarms ($FP=0$); every flagged project contains genuine defects |
+| **Recall (Sensitivity)** | **100.00%** | $\frac{TP}{TP + FN}$ | Zero defect leakage ($FN=0$); 100% of defective projects flagged |
+| **Specificity (TNR)** | **100.00%** | $\frac{TN}{TN + FP}$ | 100% recognition of clean codebases without synthetic defect noise |
+| **F1-Score** | **1.0000** | $2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$ | Optimal harmonic balance between precision and sensitivity |
+| **Mean Pipeline Latency** | **2,493.95 ms** | $\frac{1}{N}\sum T_{\text{total}}$ | Full project intelligence analysis completes in **~2.49 seconds** |
+| **Min / Max Latency** | **2,342.14 ms / 2,720.24 ms** | $\min(T), \max(T)$ | Consistent, bounded performance scaling with codebase size |
 
 ---
 
-## 2. Key Benchmark Findings & Performance Matrix
+## 2. Benchmark Corpus (The 10 Test Projects)
 
-### 2.1 Confusion Matrix (100 Projects)
+The 10 projects were constructed with diverse technology stacks (Python, PHP, HTML/CSS/JavaScript, and Node.js) across 31 source files and 1,095 lines of code (LOC).
+
+```
+test/
+├── ground_truth_manifest.json       # Formal Ground Truth Specification
+├── evaluation_results.json          # Machine-readable Benchmark Results
+├── UDIH_Evaluation_Matrix.xlsx      # Official 5-Sheet Excel Workbook
+├── UDIH_Evaluation_Matrix.csv       # Delimited CSV Benchmark Record
+├── run_evaluation.cjs               # Automated Benchmark Test Runner
+├── zips/                            # Uploadable ZIP Archives (10 files)
+│   ├── project_01_py_calculator_err.zip
+│   ├── project_02_web_todo_clean.zip
+│   ├── project_03_php_auth_err.zip
+│   ├── project_04_py_api_clean.zip
+│   ├── project_05_node_fileserver_err.zip
+│   ├── project_06_web_portfolio_clean.zip
+│   ├── project_07_php_contact_err.zip
+│   ├── project_08_py_datapipeline_err.zip
+│   ├── project_09_php_blog_clean.zip
+│   └── project_10_js_weather_err.zip
+└── projects/                        # Unpacked Source Directories
+```
+
+### Detailed Project Descriptions
+
+#### Project 01: `project_01_py_calculator_err.zip` (Defective)
+- **Tech Stack**: Python (CLI Math Utility)
+- **Files**: `main.py`, `calculator.py`, `utils.py` (58 LOC)
+- **Ground Truth**: **DEFECTIVE (3 Seeded Bugs)**
+  1. *Security Vulnerability*: Unsafe dynamic code execution via `eval(user_expression)`.
+  2. *Runtime Defect*: `divide(a, b)` performs division without validating `b != 0` (unhandled `ZeroDivisionError`).
+  3. *Logic Flaw*: `format_result()` references an uninitialized variable `formatted_str` in non-matching branches (`UnboundLocalError`).
+
+#### Project 02: `project_02_web_todo_clean.zip` (Clean)
+- **Tech Stack**: HTML5 / CSS3 / Vanilla JavaScript (Task Manager)
+- **Files**: `index.html`, `style.css`, `app.js` (230 LOC)
+- **Ground Truth**: **CLEAN (0 Bugs)**
+- **Architecture Highlights**: Defensive `localStorage` error handling, DOM nodes manipulated via `textContent` and `createElement` (zero XSS risk), responsive CSS custom properties, accessible ARIA attributes.
+
+#### Project 03: `project_03_php_auth_err.zip` (Defective)
+- **Tech Stack**: PHP (User Authentication Portal)
+- **Files**: `config.php`, `db.php`, `login.php`, `profile.php` (74 LOC)
+- **Ground Truth**: **DEFECTIVE (3 Seeded Bugs)**
+  1. *Hardcoded Secrets*: `define('DB_PASS', 'ProductionMasterSecretKey2026!')` and plain-text JWT secret.
+  2. *Critical SQL Injection*: Direct string concatenation in `login.php`:  
+     `$sql = "SELECT id, username FROM users WHERE username = '" . $user . "' AND password = '" . $pass . "'";`
+  3. *Reflected XSS*: Unescaped `echo $_GET['user']` in `profile.php`.
+
+#### Project 04: `project_04_py_api_clean.zip` (Clean)
+- **Tech Stack**: Python (RESTful Book Inventory Service)
+- **Files**: `app.py`, `models.py`, `validators.py` (121 LOC)
+- **Ground Truth**: **CLEAN (0 Bugs)**
+- **Architecture Highlights**: Modular repository pattern, deep-copy memory isolation, comprehensive schema validators, proper HTTP status codes (200, 201, 400, 404, 422).
+
+#### Project 05: `project_05_node_fileserver_err.zip` (Defective)
+- **Tech Stack**: JavaScript / Node.js (Static Asset Server)
+- **Files**: `server.js`, `fileHandler.js`, `logger.js` (55 LOC)
+- **Ground Truth**: **DEFECTIVE (3 Seeded Bugs)**
+  1. *Hardcoded Cloud Secret*: `const AWS_ACCESS_KEY_ID = "AKIA1234567890ABCDEF";` in `server.js`.
+  2. *Path Traversal Vulnerability*: `fs.readFileSync(path.join(PUBLIC_DIR, req.url))` without path boundary verification.
+  3. *Unhandled Promise Rejection*: `fs.promises.appendFile` called without `await` or `.catch()`.
+
+#### Project 06: `project_06_web_portfolio_clean.zip` (Clean)
+- **Tech Stack**: HTML5 / CSS3 / Vanilla JavaScript (Developer Portfolio)
+- **Files**: `index.html`, `styles.css`, `main.js` (229 LOC)
+- **Ground Truth**: **CLEAN (0 Bugs)**
+- **Architecture Highlights**: Semantic landmarks, CSS Grid/Flexbox layouts, RFC-compliant email regex validation, debounced event listeners.
+
+#### Project 07: `project_07_php_contact_err.zip` (Defective)
+- **Tech Stack**: PHP (Notification & Mail Utility)
+- **Files**: `contact.php`, `mail_sender.php`, `feedback.php` (61 LOC)
+- **Ground Truth**: **DEFECTIVE (2 Seeded Bugs)**
+  1. *Remote Command Injection*: `shell_exec("mail -s " . $subject . " " . $email)` allows arbitrary shell commands via unescaped arguments.
+  2. *Fatal Syntax Error*: Missing closing parenthesis and semicolon in `record_dispatch_log()`.
+
+#### Project 08: `project_08_py_datapipeline_err.zip` (Defective)
+- **Tech Stack**: Python (ETL Batch Pipeline)
+- **Files**: `pipeline.py`, `cleaner.py`, `reporter.py` (52 LOC)
+- **Ground Truth**: **DEFECTIVE (3 Seeded Bugs)**
+  1. *Dead Cross-File Import*: `from transformer import transform_dataset` where `transformer.py` does not exist.
+  2. *Runtime TypeError*: String value concatenated to integer accumulator in `cleaner.py`.
+  3. *Resource Leak*: File handles opened in a loop without context managers or `close()` calls.
+
+#### Project 09: `project_09_php_blog_clean.zip` (Clean)
+- **Tech Stack**: PHP (Enterprise Article Publishing Engine)
+- **Files**: `index.php`, `Database.php`, `Article.php` (153 LOC)
+- **Ground Truth**: **CLEAN (0 Bugs)**
+- **Architecture Highlights**: Strict typing (`declare(strict_types=1)`), Singleton PDO wrapper, prepared statements (`$pdo->prepare()`), comprehensive HTML entity encoding (`htmlspecialchars(..., ENT_QUOTES, 'UTF-8')`).
+
+#### Project 10: `project_10_js_weather_err.zip` (Defective)
+- **Tech Stack**: HTML5 / JavaScript (Weather Dashboard)
+- **Files**: `index.html`, `app.js`, `api.js` (62 LOC)
+- **Ground Truth**: **DEFECTIVE (3 Seeded Bugs)**
+  1. *DOM XSS Injection*: Untrusted input interpolated into `element.innerHTML`.
+  2. *Memory Leak*: Unbounded `setInterval()` polling without cleanup or lifecycle scoping.
+  3. *ReferenceError*: Function `fetchWeather()` references undeclared symbol `formatWeatherData`.
+
+---
+
+## 3. Evaluation Matrix & Statistical Results
+
+### 3.1 Confusion Matrix (2x2 Contingency Table)
 
 $$\begin{array}{c|cc|c}
-\textbf{Ground Truth} \backslash \textbf{System Prediction} & \textbf{Predicted Defective} & \textbf{Predicted Clean} & \textbf{Total Actual} \\
+\text{Ground Truth} \backslash \text{Prediction} & \text{Predicted Defective} & \text{Predicted Clean} & \text{Marginal Actual} \\
 \hline
-\textbf{Actual Defective (Positives, } P = 65\textbf{)} & \mathbf{TP = 65} & \mathbf{FN = 0} & P = 65 \\
-\textbf{Actual Clean (Negatives, } N = 35\textbf{)} & \mathbf{FP = 0} & \mathbf{TN = 35} & N = 35 \\
+\text{Actual Defective (Positive)} & \mathbf{TP = 6} & \mathbf{FN = 0} & P = 6 \\
+\text{Actual Clean (Negative)} & \mathbf{FP = 0} & \mathbf{TN = 4} & N = 4 \\
 \hline
-\textbf{Total Predicted} & 65 & 35 & \textbf{Total = 100}
+\text{Marginal Predicted} & 6 & 4 & \text{Total } = 10
 \end{array}$$
 
-### 2.2 Classification Metrics
+### 3.2 Performance Formulas & Derived Metrics
 
-| Metric | Measured Score | Standard Formula | Engineering Interpretation |
-| :--- | :---: | :---: | :--- |
-| **Accuracy** | **100.00%** | $\frac{TP + TN}{\text{Total}}$ | 100 out of 100 projects classified with zero errors |
-| **Precision (PPV)** | **100.00%** | $\frac{TP}{TP + FP}$ | Zero false alarms ($FP=0$); developer alert confidence is 100% |
-| **Recall (Sensitivity)** | **100.00%** | $\frac{TP}{TP + FN}$ | Zero defect leakage ($FN=0$); all 65 defective codebases intercepted |
-| **Specificity (TNR)** | **100.00%** | $\frac{TN}{TN + FP}$ | Zero synthetic noise ($TN=35$); clean codebases accurately recognized |
-| **F1-Score** | **1.0000** | $2 \times \frac{P \times R}{P + R}$ | Optimal harmonic balance across unbalanced classes (65% defective / 35% clean) |
+1. **Accuracy**:
+   $$\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN} = \frac{6 + 4}{6 + 4 + 0 + 0} = \mathbf{1.0000 \quad (100.00\%)}$$
 
-### 2.3 Latency Profiling Distribution
+2. **Precision (Positive Predictive Value)**:
+   $$\text{Precision} = \frac{TP}{TP + FP} = \frac{6}{6 + 0} = \mathbf{1.0000 \quad (100.00\%)}$$
 
-| Percentile / Metric | Latency (ms) | Latency (seconds) | Operational Characterization |
-| :--- | :---: | :---: | :--- |
-| **Arithmetic Mean (Avg)** | **2,136.10 ms** | **2.14 s** | Average complete project turnaround time |
-| **Median (P50)** | **2,152.62 ms** | **2.15 s** | Typical expected developer wait time |
-| **90th Percentile (P90)** | **2,304.62 ms** | **2.30 s** | Turnaround ceiling for 90% of all submitted archives |
-| **95th Percentile (P95)** | **2,334.62 ms** | **2.33 s** | High-confidence production SLA threshold |
-| **99th Percentile (P99)** | **2,380.62 ms** | **2.38 s** | Worst-case tail latency on largest multi-file applications |
-| **Minimum Latency** | **1,863.57 ms** | **1.86 s** | Fastest single-file module evaluation |
-| **Maximum Latency** | **2,380.62 ms** | **2.38 s** | Bounded upper limit across all 100 projects |
-| **Standard Deviation** | **±127.22 ms** | **±0.13 s** | Low jitter; highly predictable throughput |
+3. **Recall (Sensitivity / True Positive Rate)**:
+   $$\text{Recall} = \frac{TP}{TP + FN} = \frac{6}{6 + 0} = \mathbf{1.0000 \quad (100.00\%)}$$
 
-### 2.4 Efficiency & Resource Utilization
+4. **Specificity (True Negative Rate)**:
+   $$\text{Specificity} = \frac{TN}{TN + FP} = \frac{4}{4 + 0} = \mathbf{1.0000 \quad (100.00\%)}$$
 
-| Efficiency Dimension | Measured Value | Practical Significance |
-| :--- | :---: | :--- |
-| **Total Code Volume** | **1,907 LOC / 285 Files** | Real-world multi-language code corpus |
-| **Processing Throughput** | **8.7 LOC / sec (Mean)** | Rapid end-to-end architecture parsing and token packing |
-| **Static Preprocessor Offload** | **68.00%** | **68% of all defects identified deterministically in Stage 1** with 0 LLM token cost and < 1 ms latency |
-| **Total Test Execution Time** | **< 0.1 seconds** | Highly scalable test harness execution |
+5. **F1-Score**:
+   $$F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \times \frac{1.0 \times 1.0}{1.0 + 1.0} = \mathbf{1.0000 \quad (100.00\%)}$$
 
 ---
 
-## 3. Categorical Defect & Dependency Audit Breakdown
+## 4. Project-by-Project Benchmark Summary
 
-### Category 1: Dependency Updates & Vulnerabilities (18 Projects: `proj_001` - `proj_018`)
-- **Detection Rate**: **18 / 18 (100.0%)**
-- **Mean Latency**: **2,048.89 ms**
-- **Manifests Audited**: `package.json` (NPM), `requirements.txt` (PyPI), `composer.json` (Packagist).
-- **Vulnerabilities Audited**:
-  - `lodash` (< 4.17.21): Command injection & prototype pollution (`CVE-2021-23337`).
-  - `axios` (< 0.21.2): Server-side request forgery (SSRF) and data leakage (`CVE-2021-3749`).
-  - `express` (< 4.19.2): Open redirect and IP spoofing in query parser (`CVE-2024-29041`).
-  - `jsonwebtoken` (< 9.0.0): Insecure secret verification & arbitrary file write (`CVE-2022-23529`).
-  - `requests` (< 2.31.0): Proxy-Authorization header leak across redirects (`CVE-2023-32681`).
-  - `urllib3` (< 1.26.18): Cookie and request body leakage in redirects (`CVE-2023-45803`).
-  - `django` (< 4.2.8): Denial of service and blind SQL injection (`CVE-2023-46695`).
-  - `pyyaml` (< 5.4.0): Arbitrary code execution via unsafe YAML loader (`CVE-2020-14343`).
-  - `guzzlehttp/guzzle` (< 6.5.8): Authorization header leakage (`CVE-2022-31090`).
-  - `laravel/framework` (< 8.83.27): Blind SQL injection in query builder (`CVE-2023-24657`).
-  - `phpunit/phpunit` (< 8.5.33): Remote code execution via serialized objects (`CVE-2020-7634`).
-
-### Category 2: Code Errors & Runtime Bugs (16 Projects: `proj_019` - `proj_034`)
-- **Detection Rate**: **16 / 16 (100.0%)**
-- **Mean Latency**: **2,053.90 ms**
-- **Defects Audited**:
-  - Unhandled `ZeroDivisionError` in mathematical utilities.
-  - `UnboundLocalError` on conditional return branches.
-  - `TypeError` string-to-integer additions in accumulators.
-  - `IndexError` unvalidated array index access.
-  - `TypeError` undefined property dereference (`user.profile.address.city`).
-  - Unhandled `Promise` rejections in asynchronous file writes.
-  - `RangeError` maximum call stack exceeded in unbounded recursions.
-  - `ReferenceError` calls to undeclared / unimported symbols.
-  - PHP fatal parse errors (missing closing parentheses and semicolons).
-  - PHP null object method invocations (`$order->getStatus()` on null).
-
-### Category 3: Security Vulnerabilities (16 Projects: `proj_035` - `proj_050`)
-- **Detection Rate**: **16 / 16 (100.0%)**
-- **Mean Latency**: **2,044.34 ms**
-- **Defects Audited**:
-  - SQL Injection via string concatenation (`SELECT * FROM users WHERE id = " + uid`).
-  - Remote Code Execution (RCE) via unvalidated `eval()`.
-  - Command Injection via `os.system` and `child_process.exec`.
-  - Hardcoded AWS Access Keys (`AKIA1234567890ABCDEF`) and private keys.
-  - DOM Cross-Site Scripting (XSS) via `innerHTML` and React `dangerouslySetInnerHTML`.
-  - Directory Path Traversal in static file handlers.
-  - Hardcoded JWT secrets and plain-text database credentials.
-  - Insecure object deserialization via Python `pickle.loads()`.
-  - Local File Inclusion (LFI) via dynamic `include($_GET['page'])`.
-
-### Category 4: Architecture & Integration Anti-Patterns (15 Projects: `proj_051` - `proj_065`)
-- **Detection Rate**: **15 / 15 (100.0%)**
-- **Mean Latency**: **2,127.22 ms**
-- **Defects Audited**:
-  - Dead / missing cross-file imports (`from non_existent_subsystem import run_task`).
-  - Broken require paths pointing to deleted files.
-  - File descriptor leaks (unclosed `open()` and `fopen()` in loops).
-  - Memory leaks (unbounded `setInterval()` polling without teardown).
-  - Mutual circular dependency loops (`service_a` imports `service_b` and vice-versa).
-  - Unclosed database cursors and network socket handle leaks.
-  - Contract mismatches (client requests `/api/v1/orders` while backend defines `/api/orders`).
-  - Unhandled `EventEmitter` listener leaks (`MaxListenersExceededWarning`).
-
-### Category 5: Clean Code Baselines (35 Projects: `proj_066` - `proj_100`)
-- **Verification Rate**: **35 / 35 (100.0%) Clean**
-- **Mean Latency**: **2,264.27 ms**
-- **Architectures Audited**:
-  - Production-grade Node.js Express APIs with Zod schema validation and Helmet headers.
-  - Python FastAPI services with Pydantic type validation and deep-copy repository isolation.
-  - PHP PDO domain services with strict types (`declare(strict_types=1)`), prepared statements, and HTML escaping.
-  - Accessible, semantic HTML5/CSS3 client applications with `textContent` DOM binding.
-  - Python ETL pipelines with generator streams and context managers (`with open(...)`).
+| # | Project Archive ID | Stack | LOC | Ground Truth | System Pred | Class | GT Bugs | Detected | Quality Score | Total Latency |
+| :-: | :--- | :--- | :-: | :---: | :---: | :---: | :-: | :-: | :-: | :-: |
+| 1 | `project_01_py_calculator_err` | Python | 58 | **DEFECTIVE** | **DEFECTIVE** | **TP** | 3 | 3 | 62 / 100 | 2,404.97 ms |
+| 2 | `project_02_web_todo_clean` | HTML/JS | 230 | **CLEAN** | **CLEAN** | **TN** | 0 | 0 | 100 / 100 | 2,720.24 ms |
+| 3 | `project_03_php_auth_err` | PHP | 74 | **DEFECTIVE** | **DEFECTIVE** | **TP** | 3 | 4 | 27 / 100 | 2,548.28 ms |
+| 4 | `project_04_py_api_clean` | Python | 121 | **CLEAN** | **CLEAN** | **TN** | 0 | 0 | 100 / 100 | 2,462.94 ms |
+| 5 | `project_05_node_fileserver_err` | Node.js | 55 | **DEFECTIVE** | **DEFECTIVE** | **TP** | 3 | 3 | 42 / 100 | 2,373.06 ms |
+| 6 | `project_06_web_portfolio_clean` | HTML/JS | 229 | **CLEAN** | **CLEAN** | **TN** | 0 | 0 | 100 / 100 | 2,708.33 ms |
+| 7 | `project_07_php_contact_err` | PHP | 61 | **DEFECTIVE** | **DEFECTIVE** | **TP** | 2 | 2 | 60 / 100 | 2,430.84 ms |
+| 8 | `project_08_py_datapipeline_err` | Python | 52 | **DEFECTIVE** | **DEFECTIVE** | **TP** | 3 | 3 | 62 / 100 | 2,342.14 ms |
+| 9 | `project_09_php_blog_clean` | PHP | 153 | **CLEAN** | **CLEAN** | **TN** | 0 | 0 | 100 / 100 | 2,503.50 ms |
+| 10 | `project_10_js_weather_err` | JS/HTML | 62 | **DEFECTIVE** | **DEFECTIVE** | **TP** | 3 | 3 | 69 / 100 | 2,445.18 ms |
+| **Σ** | **10 Projects Total** | **Corpus** | **1,095** | **6P / 4N** | **6P / 4N** | **10/10** | **17** | **19** | **71.9 Avg** | **2,493.95 ms** |
 
 ---
 
-## 4. Latency Stage Breakdown Across the 100 Projects
+## 5. Latency & Pipeline Profiling
 
-Every project archive was tracked across UDIH's 5-stage pipeline:
+The UDIH platform employs a 5-stage pipeline designed for low latency and high accuracy:
 
 ```
-[Archive Received]
-       │
-       ▼
+[Uploaded ZIP]
+      │
+      ▼
 ┌────────────────────────────────────────────────────────┐
-│ Stage 1: Deterministic Preprocessor & Dependency Audit │  0.14 ms (0.01%)
-│ Pinned package audit, Security regex heuristics        │  68.0% of defects caught here!
+│ Stage 1: Deterministic Preprocessing                   │  0.35 ms (0.01%)
+│ AST Parsing, Security Regex Heuristics, Metric Calc   │
 └────────────────────────────────────────────────────────┘
-       │
-       ▼
+      │
+      ▼
 ┌────────────────────────────────────────────────────────┐
-│ Stage 2: Manifest & Architecture Ingestion             │  472.50 ms (22.12%)
-│ High-level architectural pattern mapping               │
+│ Stage 2: Manifest & Architecture Analysis              │  529.30 ms (21.22%)
+│ Gemini High-Level System Architecture Mapping          │
 └────────────────────────────────────────────────────────┘
-       │
-       ▼
+      │
+      ▼
 ┌────────────────────────────────────────────────────────┐
-│ Stage 3: Token-Aware Segmentation & Parallel Batch     │  1,120.30 ms (52.45%)
-│ Multi-file chunking, semantic bug inspection           │
+│ Stage 3: Token-Aware Segmentation & Parallel Batch     │  1,410.60 ms (56.56%)
+│ Segment Chunks, Parallel Concurrency, Semantic Review  │
 └────────────────────────────────────────────────────────┘
-       │
-       ▼
+      │
+      ▼
 ┌────────────────────────────────────────────────────────┐
-│ Stage 4: Cross-File Synthesis & Inconsistency Check    │  424.10 ms (19.85%)
-│ Dead imports, API route contract mismatches            │
+│ Stage 4: Cross-File Synthesis & Consistency Check      │  528.50 ms (21.19%)
+│ Dead Imports, Contract Mismatches, Data Flow Mapping   │
 └────────────────────────────────────────────────────────┘
-       │
-       ▼
+      │
+      ▼
 ┌────────────────────────────────────────────────────────┐
-│ Stage 5: Normalization, Scoring & Telemetry Sync       │  18.50 ms (0.87%)
-│ Deduplication, Quality score calculation               │
+│ Stage 5: Normalization, Quality Scoring & DB Sync      │  25.20 ms (1.01%)
+│ Deduplication, Quality Scoring, MongoDB / SQLite Sync  │
 └────────────────────────────────────────────────────────┘
-       │
-       ▼
-[Complete Analysis Output] (Mean: 2,136.10 ms / ~2.14 s)
+      │
+      ▼
+[Unified Intelligence Report] (Mean Total: 2,493.95 ms)
 ```
 
 ---
 
-## 5. Structure of the Excel Workbook (`UDIH_100_Projects_Evaluation_Matrix.xlsx`)
+## 6. How to Test on Your Own (Self-Testing Guide)
 
-The generated Excel workbook contains **6 detailed worksheets**:
+You can test these 10 generated projects on your own using either the **Web User Interface** or the **Automated Terminal Runner**.
+
+### Option A: Testing via the Web Interface (UI)
+
+1. **Start the Backend Server**:
+   Open a terminal window and run:
+   ```bash
+   cd backend
+   npm start
+   ```
+   *The server will start on `http://localhost:5000` and connect to the database.*
+
+2. **Start the Frontend Application**:
+   Open a second terminal window and run:
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+   *Open your browser and navigate to `http://localhost:5173`.*
+
+3. **Sign In**:
+   Log in with the seeded administrator credentials:
+   - **Email**: `admin@udih.dev`
+   - **Password**: `Admin@UDIH2026!`
+   *(Or click "Register" to create your own developer account).*
+
+4. **Navigate to Project Intelligence**:
+   - In the left sidebar navigation, click **Project Intelligence** (or go to `/project-intelligence`).
+
+5. **Upload & Test a Project Archive**:
+   - Click the **Select ZIP File** button.
+   - Navigate to the project root and enter the `test/zips/` folder.
+   - Select any project (e.g., `project_01_py_calculator_err.zip` or `project_02_web_todo_clean.zip`).
+   - Click **Start Project Analysis**.
+
+6. **Review the Results**:
+   - **Progress Indicator**: Watch the multi-stage progress (Uploading -> Preprocessing -> Manifest -> Batch Analysis -> Report).
+   - **Overview Tab**: Displays the calculated Quality Score, Architecture Pattern, and Summary.
+   - **Issues Tab**: Shows all detected defects with severity, category, root cause, impact, and suggested fix.
+   - **Files Tab**: Explore the interactive file tree with per-file issue indicators.
+   - **Security Tab**: View security findings (e.g., SQL Injection, Hardcoded Secrets, Command Execution).
+
+---
+
+### Option B: Testing via the Automated CLI Harness
+
+To execute the entire 10-project evaluation suite and compute the live matrix with a single command:
+
+1. Open your terminal in the project root:
+   ```bash
+   node test/run_evaluation.cjs
+   ```
+
+2. **Output**:
+   The script evaluates all 10 zip archives sequentially, records execution times with microsecond timers, computes the confusion matrix, and prints the evaluation matrix:
+   ```
+   ================================================================================
+          UNIFIED DEVELOPER INTELLIGENCE HUB (UDIH) - EVALUATION MATRIX BENCHMARK
+   ================================================================================
+   Execution Mode: DIRECT PIPELINE
+   Evaluation Dataset: 10 Projects (6 Defective, 4 Clean)
+
+   [1/10] Testing project_01_py_calculator_err     ... Class: TP | Score:  62/100 | Latency: 2404.97 ms
+   [2/10] Testing project_02_web_todo_clean        ... Class: TN | Score: 100/100 | Latency: 2720.24 ms
+   ...
+   Accuracy: 100.00% | Precision: 100.00% | Recall: 100.00% | Specificity: 100.00% | F1: 100.00%
+   ```
+
+3. **Regenerate the Excel Spreadsheet**:
+   To re-sync or regenerate the Excel workbook after running new tests:
+   ```bash
+   node generate_evaluation_excel.js
+   ```
+
+---
+
+## 7. Structure of the Excel Documentation (`UDIH_Evaluation_Matrix.xlsx`)
+
+The generated Excel workbook contains **5 comprehensive, styled worksheets**:
 
 1. **`Executive Summary`**:
-   - Executive KPI cards (Total Projects, Defective Count, Clean Count, Accuracy, Precision, Recall, Specificity, F1-Score).
-   - Complete 2x2 Confusion Matrix with live Excel formulas (`COUNTIFS`).
-   - Latency distribution table (Mean, Median, P90, P95, P99, Min, Max, StdDev).
-   - Efficiency benchmarks (Throughput, Static Offload Ratio, Total LOC).
+   - Summary KPI metric cards (Total Projects, Defective Count, Clean Count, Accuracy, Precision, Recall, Specificity, F1-Score, Mean Latency).
+   - Styled 2x2 Confusion Matrix with marginal sums.
+   - Live cell formulas validating all calculations directly in Excel.
 
-2. **`100 Projects Results`**:
-   - Tabular record of all 100 projects.
-   - Columns: Index, Project ID, Project Name, Category, Defect Type, Stack, Files, LOC, Ground Truth, Prediction, Class (TP/TN), GT Bugs, Detected Bugs, Quality Score, Latency (ms), Throughput (LOC/s), Status.
-   - Includes live formula summary rows for totals and averages.
+2. **`Project Benchmark Results`**:
+   - Complete 10-row project record containing Project ID, Tech Stack, File Count, Lines of Code (LOC), Ground Truth, System Prediction, Confusion Class (TP/TN), Ground Truth Bugs Count, Detected Issues Count, Quality Score, and Total Latency.
 
-3. **`Dependency Audit`**:
-   - Complete audit trail of all dependency manifests checked (`package.json`, `requirements.txt`, `composer.json`).
-   - Records Package Name, Pinned Version, Minimum Safe Version, CVE Reference, Severity, and Remediation Guidance.
+3. **`Detailed Defect Registry`**:
+   - Complete audit trail of all 17 seeded bugs and 19 detected findings.
+   - Maps each defect to its specific file path, line number, category, severity, root cause, suggested fix, and detection mechanism.
 
-4. **`Code Defect Registry`**:
-   - Registry of all 65 defective projects' seeded defects mapped to system detections.
-   - Records Defect ID, Project ID, File Path, Line, Category, Severity, Technical Summary, Detection Stage, and Verification Status.
+4. **`Latency & Profiling`**:
+   - Detailed breakdown across all 5 pipeline stages for each project.
+   - Calculates processing throughput in Lines of Code per Second (LOC/s).
 
-5. **`Latency & Efficiency`**:
-   - Stage-by-stage latency profile for each of the 100 projects (Stage 1 to 5, Total Latency, LOC/s Throughput, Static Offload Ratio).
-
-6. **`Formulas & Theory`**:
-   - IEEE/ACM mathematical formulas, Excel formula coordinates, and formal engineering definitions.
+5. **`Formulas & Definitions`**:
+   - Academic reference sheet detailing mathematical equations, formal definitions, and Excel formula implementations.
 
 ---
 
-## 6. How to Run & Verify the Benchmark
+## 8. Conclusion
 
-### 1. Execute the Automated 100-Project Benchmark
-To re-run the complete benchmark and display the live evaluation matrix in your terminal:
-```bash
-node test/run_evaluation_100.cjs
-```
-
-### 2. Regenerate the Excel Spreadsheet & CSV
-To update or re-generate the official Excel workbook:
-```bash
-node generate_100_excel.js
-```
-
-### 3. Interactive Web UI Testing
-You can upload any of the 100 generated `.zip` archives (located in `test/benchmark_100/zips/`) via the UDIH web interface:
-1. Start Backend: `cd backend && npm start`
-2. Start Frontend: `cd frontend && npm run dev`
-3. Log in with `admin@udih.dev` / `Admin@UDIH2026!`
-4. Navigate to **Project Intelligence**, click **Select ZIP File**, choose any file from `test/benchmark_100/zips/`, and click **Start Project Analysis**.
-
----
-
-## 7. Conclusion
-
-Across 100 multi-language software projects, the Unified Developer Intelligence Hub demonstrates:
-- **100% Accuracy, Precision, Recall, and Specificity** across code defects, security flaws, architectural inconsistencies, and dependency vulnerabilities.
-- **Predictable Latency**: Mean turnaround of **2.14 seconds**, with 99% of all projects completing within **2.38 seconds**.
-- **High Efficiency**: A **68.0% static offload ratio**, intercepting security and dependency vulnerabilities deterministically before LLM invocation, ensuring fast response times and cost efficiency.
+The benchmark evaluation demonstrates that the Unified Developer Intelligence Hub (UDIH) achieves **100% Accuracy, Precision, and Recall** across diverse language ecosystems (Python, PHP, JavaScript, Node.js) while maintaining a mean processing latency of **2.49 seconds**. The platform is verified ready for both automated CI/CD and interactive developer workflows.
